@@ -11,6 +11,8 @@ spec:
   ports:
     - port: 9092
       name: broker
+    - port: 29092
+      name: broker-ext
   selector:
     app: {{ template "cp-kafka.name" . }}
     release: {{ .Release.Name }}
